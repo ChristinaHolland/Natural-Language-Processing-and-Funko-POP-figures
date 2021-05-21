@@ -83,49 +83,47 @@ I realized literally while watching other people's presentations that I never ac
 
 #### Instructions.md -- the original readme file for the project
 
-#### project 3.pdf -- presentation slides
-
 #### Notebooks and scripts:
 
-* __project3_0_experimenting.ipynb__
+* __0_experimenting.ipynb__
 
 This notebook exists purely for my first attempts at pulling the data, as I was just seeing how everything worked. 
 
-* __project3_1_getdata.ipynb & project3_1_getdata.py__
+* __1_getdata.ipynb & project3_1_getdata.py__
 
-The code for pulling my data for this project resides in project3_1_getdata.ipynb, which was then turned into project3_1_getdata.py to run on the command line.
+The code for pulling my data for this project resides in 1_getdata.ipynb, which was then turned into 1_getdata.py to run on the command line.
 
-* __project3_2_eda_modeling.ipynb__
+* __2_eda_modeling.ipynb__
 
 This is the notebook where I did my data exploration and cleaning, and ran my first two very simple models, Naive Bayesian and Logistic Regression.
 
-* __project3_3_ridge_lasso.ipynb__
+* __3_ridge_lasso.ipynb__
 
 Wherein I attempt some more to get better results out of my logistic regression model.
 
-* __project3_4_KNN.ipynb__
+* __4_KNN.ipynb__
 
 Wherein I try using K Nearest Neighbors to see if I can do better. It didn't turn out to be successful.
 
-* __project3_5_Tfidvectorization.ipynb__
+* __5_Tfidvectorization.ipynb__
 
 Wherein I try different choices in preprocessing: TfidVectorizer instead of CountVectorizer, stemming, and lemmatizing.
 
-* __project3_6_randomforest_supportvector.ipynb__
+* __6_randomforest_supportvector.ipynb__
 
 Wherein I try a couple more models, random forest and support vectors.
 
-* __project3_7_Visualization.ipynb__
+* __7_Visualization.ipynb__
 
 Visualizations to answer my problem statement.
 
-* __project3_8_checkingforeffectofbinarization.ipynb__
+* __8_checkingforeffectofbinarization.ipynb__
 
 Just what it says. Checking (after the fact unfortunately) to see whether results depend on whether y is 'fantasy' and 'scifi' vs. 0 and 1.
 
 ## Data Collection
 
-__Please see project3_1_getdata.ipynb or project3_1_getdata.py for code used__
+__Please see 1_getdata.ipynb or 1_getdata.py for code used__
 
 The subreddits chosen for this project were r/fantasy, and r/scifi.
 
@@ -140,7 +138,7 @@ The subreddits chosen for this project were r/fantasy, and r/scifi.
 
 ## Data Cleaning and EDA
 
-__Please see project3_2_eda_modeling.ipynb for code used__
+__Please see 2_eda_modeling.ipynb for code used__
 
 * __NULL Values:__
 
@@ -168,7 +166,7 @@ Also sometimes comments/posts on reddit get removed for various reasons. They ar
 
 * __Stop words__
 
-__Please see project3_2_eda_modeling.ipynb for code used__
+__Please see 2_eda_modeling.ipynb for code used__
 
 The goal of this project is to separate popular topics in fantasy from popular topics in science fiction, to see what is quintessentially representative of each of the subgenres at the current moment in time, in order to market Funko POP figures that would be well recieved by each fandom.
 
@@ -180,13 +178,13 @@ Then I just ran CountVectorizer, and counted the frequency of words used in each
 
 * __Vectorizing__
 
-I started with CountVectorizer (__see project3_2_eda_modeling.ipynb__) , and that works pretty well -- my second model, a basic logistic regression, had an accuracy of 81%. 
+I started with CountVectorizer (__see 2_eda_modeling.ipynb__) , and that works pretty well -- my second model, a basic logistic regression, had an accuracy of 81%. 
 
-Later, I did try using TfidVectorizer as well (__see project3_5_Tfidvectorization.ipynb__), but that did not perform as well as CountVectorizer.
+Later, I did try using TfidVectorizer as well (__see 5_Tfidvectorization.ipynb__), but that did not perform as well as CountVectorizer.
 
 * __Stemming / Lemmatizing__
 
-__Please see project3_5_Tfidvectorization.ipynb for code used__
+__Please see 5_Tfidvectorization.ipynb for code used__
 
 Originally, I did not do either stemming or lemmatizing. I did later try to incorporate stemming using PorterStemmer from sklearn, but it did not improve model performance.
 
